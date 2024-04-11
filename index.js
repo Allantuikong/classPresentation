@@ -101,15 +101,15 @@ submitBtn.addEventListener("click", ()=> {
     if(answer){
         if(answer === quizData[currentQuiz].correct){
             totalScore++;
-            submitbtn.style.backgroundColor = "green";
+            submitBtn.style.backgroundColor = "green";
         }   else {
-            submitbtn.style.backgroundColor = "red";
+            submitBtn.style.backgroundColor = "red";
         }
         currentQuiz++
         if(currentQuiz<quizData.length){
             loadQuiz();
             setTimeout(() => {
-                submitbtn.style.backgroundColor = "";
+                submitBtn.style.backgroundColor = "";
             }, 1000);
 
 submitbtn.addEventListener("click", ()=> {
