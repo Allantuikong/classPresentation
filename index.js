@@ -77,11 +77,17 @@ submitbtn.addEventListener("click", ()=> {
     const answer = getSelected()
     if(answer){
         if(answer === quizData[currentQuiz].correct){
-            totalScore++
+            totalScore++;
+            submitbtn.style.backgroundColor = "green";
+        }   else {
+            submitbtn.style.backgroundColor = "red";
         }
         currentQuiz++
         if(currentQuiz<quizData.length){
-            loadQuiz()
+            loadQuiz();
+            setTimeout(() => {
+                submitbtn.style.backgroundColor = "";
+            }, 1000);
         } else {
             quiz.innerHTML = `
             <h2> You answered ${totalScore}/${quizData.length} questions correctly</h2>
