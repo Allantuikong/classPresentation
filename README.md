@@ -34,7 +34,7 @@ Welcome to the Quiz App! This is a simple web application where users can take q
 
 ## Deployed App
 
-The Quiz App is deployed and accessible online. You can try it out [here](https://yourquizapp.com).
+The Quiz App is deployed and accessible online. You can try it out [here](https://brianrony.github.io/classPresentation/).
 
 ## Technologies Used
 
