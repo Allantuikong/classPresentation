@@ -42,7 +42,7 @@ const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
 const d_text = document.getElementById("d_text");
-const submitbtn = document.getElementById("submit");
+const submitBtn = document.getElementById("submit");
 
 let currentQuiz = 0 // Index of current question being displayed
 let totalScore = 0 // Total Score of the user
@@ -81,7 +81,7 @@ function getSelected(){
 }
 
 //Listens for user selections
-submitbtn.addEventListener("click", ()=> {
+submitBtn.addEventListener("click", ()=> {
     const answer = getSelected()
     if(answer){
         if(answer === quizData[currentQuiz].correct){
