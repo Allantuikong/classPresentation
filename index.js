@@ -1,4 +1,5 @@
 // The Quiz Questions
+
 const quizData = [
     {
         question: "Which language runs in a web browser",
@@ -35,6 +36,7 @@ const quizData = [
 ];
 
 // Get HTML elements and store in variables.
+
 const quiz = document.getElementById("quiz");
 const answersA1 = document.querySelectorAll(".answer");
 const questionA1 = document.getElementById("question");
@@ -50,6 +52,14 @@ let totalScore = 0 // Total Score of the user
 loadQuiz() // function that loads the current quiz question to the page. Updates question text and answers options based on current quiz index
 
 // Function that loads our questions and answers based on current quiz index.
+
+const submitbtn = document.getElementById("submit");
+
+let currentQuiz = 0
+let totalScore = 0
+
+loadQuiz()
+
 function loadQuiz(){
      
     deselectAnswers()
@@ -70,6 +80,11 @@ function deselectAnswers(){
 }
 
 // Retrieves ID of the selected Answer
+
+function deselectAnswers(){
+    answersA1.forEach(answersA => answersA.checked = false)
+}
+
 function getSelected(){
     let answer
     answersA1.forEach(answersA1 => {
@@ -96,6 +111,17 @@ submitBtn.addEventListener("click", ()=> {
             setTimeout(() => {
                 submitbtn.style.backgroundColor = "";
             }, 1000);
+
+submitbtn.addEventListener("click", ()=> {
+    const answer = getSelected()
+    if(answer){
+        if(answer === quizData[currentQuiz].correct){
+            totalScore++
+        }
+        currentQuiz++
+        if(currentQuiz<quizData.length){
+            loadQuiz()
+
         } else {
             quiz.innerHTML = `
             <h2> You answered ${totalScore}/${quizData.length} questions correctly</h2>
