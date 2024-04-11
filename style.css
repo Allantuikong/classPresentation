@@ -1,60 +1,59 @@
 *{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
-    align-items: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  align-items: center;
 }
 body {
-    background-color: skyblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    height: 75vh;
+  background-color: skyblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 75vh;
 
 }
 .quizContainer{
-    background-color: white;
-    border-radius: 10px;
-    width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  width: 400px;
 
 }
 .quizHeader{
-    padding: 4rem;
+  padding: 4rem;
 }
 h2{
-    padding: 1rem;
-    text-align: center;
-    margin: 0;
-    font-size: larger ;
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+  font-size: larger ;
 }
 ul{
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 ul li{
-    font-size: small;
-    margin: 7px;
+  font-size: small;
+  margin: 7px;
 }
 ul li label{
-    cursor: pointer;
+  cursor: pointer;
 }
 button{
-    background-color: aqua;
-    border: none;
-    width: 100%;
-    border: none;
-    cursor: pointer;
-    font-size: small;
-    padding: 1rem;
-    border-radius: 5px;
-    font: inherit;
-    text-align: center;
-    
+  background-color: aqua;
+  border: none;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-size: small;
+  padding: 1rem;
+  border-radius: 5px;
+  font: inherit;
+  text-align: center;
+  
 }
 button:hover{
-    background-color: aquamarine;
+  background-color: aquamarine;
 }
 button:focus{
-    background-color: #14d15d;
+  background-color: #14d15d;
 }
-
