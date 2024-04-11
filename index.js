@@ -1,3 +1,4 @@
+// The Quiz Questions
 const quizData = [
     {
         question: "Which language runs in a web browser",
@@ -32,6 +33,8 @@ const quizData = [
         correct:"c",
     }
 ];
+
+// Get HTML elements and store in variables.
 const quiz = document.getElementById("quiz");
 const answersA1 = document.querySelectorAll(".answer");
 const questionA1 = document.getElementById("question");
@@ -41,11 +44,12 @@ const c_text = document.getElementById("c_text");
 const d_text = document.getElementById("d_text");
 const submitbtn = document.getElementById("submit");
 
-let currentQuiz = 0
-let totalScore = 0
+let currentQuiz = 0 // Index of current question being displayed
+let totalScore = 0 // Total Score of the user
 
-loadQuiz()
+loadQuiz() // function that loads the current quiz question to the page. Updates question text and answers options based on current quiz index
 
+// Function that loads our questions and answers based on current quiz index.
 function loadQuiz(){
      
     deselectAnswers()
@@ -60,9 +64,12 @@ function loadQuiz(){
 
 }
 
+// Clears all previously selected answers
 function deselectAnswers(){
     answersA1.forEach(answersA => answersA.checked = false)
 }
+
+// Retrieves ID of the selected Answer
 function getSelected(){
     let answer
     answersA1.forEach(answersA1 => {
@@ -73,6 +80,7 @@ function getSelected(){
     return answer
 }
 
+//Listens for user selections
 submitbtn.addEventListener("click", ()=> {
     const answer = getSelected()
     if(answer){
